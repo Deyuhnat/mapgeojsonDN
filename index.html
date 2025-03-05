@@ -40,7 +40,7 @@
         attribution: "© OpenStreetMap contributors",
       }).addTo(map);
 
-      // Load GeoJSON từ file local
+      // Load bản đồ Việt Nam
       $.getJSON("vietnam.geojson.json", function (data) {
         L.geoJSON(data, {
           style: function (feature) {
@@ -54,6 +54,36 @@
           },
           onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.ten_tinh);
+          },
+        }).addTo(map);
+      });
+
+      // Load bản đồ Hoàng Sa
+      $.getJSON("hoangsa.json", function (data) {
+        L.geoJSON(data, {
+          style: {
+            color: "#FFD700", // Màu vàng
+            weight: 1,
+            fillColor: "#FFCC00",
+            fillOpacity: 0.7,
+          },
+          onEachFeature: function (feature, layer) {
+            layer.bindPopup("Quần đảo Hoàng Sa");
+          },
+        }).addTo(map);
+      });
+
+      // Load bản đồ Trường Sa
+      $.getJSON("truongsa.json", function (data) {
+        L.geoJSON(data, {
+          style: {
+            color: "#FFA500", // Màu cam
+            weight: 1,
+            fillColor: "#FF9900",
+            fillOpacity: 0.7,
+          },
+          onEachFeature: function (feature, layer) {
+            layer.bindPopup("Quần đảo Trường Sa");
           },
         }).addTo(map);
       });
