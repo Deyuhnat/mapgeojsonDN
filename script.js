@@ -11,23 +11,23 @@ var map = L.map("map", {
   renderer: L.svg({ padding: 0.5 }),
 });
 
-// Nếu pane marker đã tồn tại thì xóa đi
+// If markerPane already exists, remove it
 if (map.getPane("markerPane")) {
   map.removeLayer(map.getPane("markerPane"));
 }
 
-// Tạo pane cho các dấu chấm, gắn class để style bằng CSS
+// Create a pane for markers and add a CSS class
 const markerPane = map.createPane("markerPane");
 markerPane.classList.add("marker-pane");
 
-// Loại bỏ layer OpenStreetMap nếu có
+// Remove OpenStreetMap tile layer if exists
 map.eachLayer(function (layer) {
   if (layer instanceof L.TileLayer) {
     map.removeLayer(layer);
   }
 });
 
-// Hàm load GeoJSON cho các vùng
+// Function to load GeoJSON for regions
 function addVietnamLayer(geojsonPath, color = "#d3daf0") {
   return new Promise((resolve, reject) => {
     $.getJSON(geojsonPath)
@@ -52,43 +52,64 @@ function addVietnamLayer(geojsonPath, color = "#d3daf0") {
   });
 }
 
-// Load các layer GeoJSON: Việt Nam, Trường Sa, Hoàng Sa
+// Load GeoJSON layers: Vietnam, Hoang Sa, Truong Sa
 addVietnamLayer("vietnam.geojson.json");
 addVietnamLayer("truongsa.json", "#f4a261");
 addVietnamLayer("hoangsa.json", "#e76f51");
 
-// Định nghĩa màu theo loại hình công ty
+// Define colors by company type
 const typeColors = {
-  technology: "#FFFF00",
-  manufacturing: "#33FF57",
-  finance: "#3385FF",
+  strategic: "#ff5733",
+  semiconductor: "#33aaff",
+  startup: "#ffcc00",
+  ai: "#33cc33",
+  supplier: "#9900cc",
 };
 
-// Dữ liệu công ty sẽ được load từ file JSON
+// Company data will be loaded from JSON file
 var companies = [];
 
-// Danh sách marker hiện có
+// List of existing markers
 var markers = [];
 
-// Hàm hiển thị các công ty trên bản đồ
-function displayCompanies() {
-  var typeFilter = document.getElementById("company-type").value;
-  var sizeFilter = document.getElementById("company-size").value;
-  var industryFilter = document.getElementById("company-industry").value;
+// Function to get selected values from multi-select dropdowns
+function getSelectedValues(dropdownId) {
+  const dropdown = document.getElementById(dropdownId);
+  const checked = Array.from(dropdown.querySelectorAll("input:checked"));
 
-  // Xóa các marker cũ
+  // If "All" is checked or no checkboxes are checked, return empty array (show all)
+  if (checked.some((cb) => cb.value === "all") || checked.length === 0) {
+    return [];
+  }
+
+  return checked.map((cb) => cb.value);
+}
+
+// Function to display companies on the map
+function displayCompanies() {
+  const typeFilters = getSelectedValues("company-type");
+  const segmentFilters = getSelectedValues("industry-segment");
+  const facilityFilters = getSelectedValues("facility-activity");
+
+  // Remove old markers
   markers.forEach((marker) => map.removeLayer(marker));
   markers = [];
 
   companies.forEach((company) => {
-    if (
-      (typeFilter === "all" || company.type === typeFilter) &&
-      (sizeFilter === "all" || company.size === sizeFilter) &&
-      (industryFilter === "all" || company.industry === industryFilter)
-    ) {
+    let matchesType =
+      typeFilters.length === 0 ||
+      typeFilters.some((filter) => company.type.includes(filter));
+    let matchesSegment =
+      segmentFilters.length === 0 ||
+      segmentFilters.some((filter) => company.segment.includes(filter));
+    let matchesFacility =
+      facilityFilters.length === 0 ||
+      facilityFilters.some((filter) => company.facility.includes(filter));
+
+    if (matchesType && matchesSegment && matchesFacility) {
       var dot = L.circleMarker([company.lat, company.lng], {
         color: "#FFFFFF",
-        fillColor: typeColors[company.type],
+        fillColor: typeColors[company.type[0]] || "#000000", // Use the first type for color
         fillOpacity: 1,
         radius: 6,
         weight: 2,
@@ -96,7 +117,11 @@ function displayCompanies() {
       }).addTo(map);
 
       dot.bindPopup(
-        `📍 <b>${company.name}</b><br>Size: ${company.size}<br>Industry: ${company.industry}`
+        `📍 <b>${company.name}</b><br>Type: ${company.type.join(
+          ", "
+        )}<br>Segment: ${company.segment.join(
+          ", "
+        )}<br>Facility: ${company.facility.join(", ")}`
       );
 
       dot.bringToFront();
@@ -104,14 +129,12 @@ function displayCompanies() {
     }
   });
 
-  map._renderer._update();
-
   setTimeout(() => {
     markers.forEach((marker) => marker.bringToFront());
   }, 500);
 }
 
-// Load dữ liệu công ty từ file companies.json và hiển thị
+// Load company data from companies.json and display
 $.getJSON("companies.json")
   .done(function (data) {
     companies = data;
@@ -121,14 +144,78 @@ $.getJSON("companies.json")
     console.error("Error loading companies data:", err);
   });
 
-// Thêm sự kiện thay đổi giá trị lọc
-document
-  .querySelectorAll("#company-type, #company-size, #company-industry")
-  .forEach((select) => select.addEventListener("change", displayCompanies));
+// Add event listeners for filters
+// Handle dropdown toggle
+document.querySelectorAll(".dropdown-toggle").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const target = document.getElementById(button.dataset.target);
+    target.classList.toggle("show");
+  });
+});
 
+document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+  menu.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener("click", (e) => {
+  if (!e.target.matches(".dropdown-toggle")) {
+    document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+      menu.classList.remove("show");
+    });
+  }
+});
+
+// Handle checkbox changes
+document
+  .querySelectorAll('.dropdown-menu input[type="checkbox"]')
+  .forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      const dropdown = this.closest(".dropdown-menu");
+      const allCheckbox = dropdown.querySelector('input[value="all"]');
+
+      if (this.value === "all") {
+        // When "All" is checked, uncheck others
+        dropdown.querySelectorAll('input:not([value="all"])').forEach((cb) => {
+          cb.checked = false;
+        });
+      } else {
+        // When any other checkbox is checked, uncheck "All"
+        allCheckbox.checked = false;
+      }
+
+      updateDropdownToggleText(dropdown);
+      displayCompanies();
+    });
+  });
+
+// Update dropdown toggle text
+function updateDropdownToggleText(dropdown) {
+  const checked = Array.from(
+    dropdown.querySelectorAll('input:checked:not([value="all"])')
+  );
+  const toggle = document.querySelector(`[data-target="${dropdown.id}"]`);
+
+  if (
+    checked.length === 0 ||
+    dropdown.querySelector('input[value="all"]:checked')
+  ) {
+    toggle.textContent = "All ";
+  } else {
+    toggle.textContent = `${checked.length} selected `;
+  }
+}
+
+// Update reset filter handler
 document.getElementById("reset-filter").addEventListener("click", function () {
-  document
-    .querySelectorAll("#company-type, #company-size, #company-industry")
-    .forEach((select) => (select.value = "all"));
+  document.querySelectorAll(".dropdown-menu").forEach((dropdown) => {
+    dropdown.querySelectorAll("input").forEach((cb) => {
+      cb.checked = cb.value === "all";
+    });
+    updateDropdownToggleText(dropdown);
+  });
   displayCompanies();
 });

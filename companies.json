@@ -1,33 +1,33 @@
 [
   {
     "name": "Tech Danang",
-    "type": "technology",
-    "size": "small",
-    "industry": "software",
+    "type": ["semiconductor", "ai"],
+    "segment": ["fabless", "fpga-design"],
+    "facility": ["chip-design", "research-development"],
     "lat": 16.06,
     "lng": 108.21
   },
   {
     "name": "Viet Software",
-    "type": "technology",
-    "size": "medium",
-    "industry": "software",
+    "type": ["ai", "strategic"],
+    "segment": ["eda-software", "university-rd"],
+    "facility": ["research-development", "ip-core"],
     "lat": 16.07,
     "lng": 108.2
   },
   {
     "name": "Danang Auto",
-    "type": "manufacturing",
-    "size": "large",
-    "industry": "automotive",
+    "type": ["strategic", "supplier"],
+    "segment": ["manufacturing", "materials"],
+    "facility": ["wafer-fabrication", "assembly-testing"],
     "lat": 16.05,
     "lng": 108.23
   },
   {
     "name": "Finance Hub",
-    "type": "finance",
-    "size": "medium",
-    "industry": "banking",
+    "type": ["supplier"],
+    "segment": ["equipment"],
+    "facility": ["equipment-manufacturers"],
     "lat": 16.04,
     "lng": 108.22
   }

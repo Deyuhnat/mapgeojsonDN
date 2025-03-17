@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bản đồ Việt Nam - Đà Nẵng nổi bật</title>
+    <title>Vietnam Map - Da Nang Highlight</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/jquery"></script>
@@ -9,46 +9,129 @@
   </head>
   <body>
     <div id="filter-container">
-      <label for="company-type">Loại hình công ty:</label>
-      <select id="company-type">
-        <option value="all">Tất cả</option>
-        <option value="technology">Công nghệ</option>
-        <option value="manufacturing">Sản xuất</option>
-        <option value="finance">Tài chính</option>
-      </select>
+      <!-- Company Type Dropdown -->
+      <div class="filter-group">
+        <label>Company Type:</label>
+        <div class="custom-dropdown">
+          <button class="dropdown-toggle" data-target="company-type">
+            All
+          </button>
+          <div id="company-type" class="dropdown-menu">
+            <label><input type="checkbox" value="all" checked /> All</label>
+            <label
+              ><input type="checkbox" value="strategic" /> City's Strategic
+              Partners</label
+            >
+            <label
+              ><input type="checkbox" value="semiconductor" /> Companies in
+              Semiconductor</label
+            >
+            <label
+              ><input type="checkbox" value="startup" /> Startups in
+              Semiconductor</label
+            >
+            <label><input type="checkbox" value="ai" /> Companies in AI</label>
+            <label
+              ><input type="checkbox" value="supplier" /> Equipment
+              Suppliers</label
+            >
+          </div>
+        </div>
+      </div>
 
-      <label for="company-size">Quy mô công ty:</label>
-      <select id="company-size">
-        <option value="all">Tất cả</option>
-        <option value="small">Nhỏ</option>
-        <option value="medium">Vừa</option>
-        <option value="large">Lớn</option>
-      </select>
+      <!-- Industry Segment Dropdown -->
+      <div class="filter-group">
+        <label>Semiconductor Industry Segment:</label>
+        <div class="custom-dropdown">
+          <button class="dropdown-toggle" data-target="industry-segment">
+            All
+          </button>
+          <div id="industry-segment" class="dropdown-menu">
+            <label><input type="checkbox" value="all" checked /> All</label>
+            <label><input type="checkbox" value="ip-eda" /> IP & EDA</label>
+            <label><input type="checkbox" value="fabless" /> Fabless</label>
+            <label><input type="checkbox" value="foundry" /> Foundry</label>
+            <label><input type="checkbox" value="idm" /> IDM</label>
+            <label><input type="checkbox" value="osat" /> OSAT</label>
+            <label><input type="checkbox" value="equipment" /> Equipment</label>
+            <label><input type="checkbox" value="materials" /> Materials</label>
+            <label
+              ><input type="checkbox" value="university-rd" /> University R&D
+              Partner</label
+            >
+          </div>
+        </div>
+      </div>
 
-      <label for="company-industry">Ngành công ty:</label>
-      <select id="company-industry">
-        <option value="all">Tất cả</option>
-        <option value="software">Phần mềm</option>
-        <option value="automotive">Ô tô</option>
-        <option value="banking">Ngân hàng</option>
-      </select>
+      <!-- Facility Activity Dropdown -->
+      <div class="filter-group">
+        <label>Semiconductor Facility Activity:</label>
+        <div class="custom-dropdown">
+          <button class="dropdown-toggle" data-target="facility-activity">
+            All
+          </button>
+          <div id="facility-activity" class="dropdown-menu">
+            <label><input type="checkbox" value="all" checked /> All</label>
+            <label
+              ><input type="checkbox" value="manufacturing" />
+              Manufacturing</label
+            >
+            <label
+              ><input type="checkbox" value="chip-design" /> Chip Design</label
+            >
+            <label><input type="checkbox" value="ip-core" /> IP Core</label>
+            <label
+              ><input type="checkbox" value="eda-software" /> EDA
+              Software</label
+            >
+            <label
+              ><input type="checkbox" value="rnd" /> Research &
+              Development</label
+            >
+            <label
+              ><input type="checkbox" value="material-suppliers" /> Material
+              Suppliers</label
+            >
+            <label
+              ><input type="checkbox" value="equipment-manufacturers" />
+              Equipment Manufacturers</label
+            >
+            <label
+              ><input type="checkbox" value="wafer-fabrication" /> Wafer
+              Fabrication</label
+            >
+            <label
+              ><input type="checkbox" value="assembly-testing" /> Assembly &
+              Testing</label
+            >
+          </div>
+        </div>
+      </div>
 
       <button id="reset-filter">Reset</button>
     </div>
 
-    <!-- Chú thích màu sắc -->
+    <!-- Color Legend -->
     <div id="legend">
       <span
-        ><span class="legend-color" style="background: #ffff00"></span> Công
-        nghệ</span
+        ><span class="legend-color" style="background: #ff5733"></span> City's
+        Strategic Partners</span
       >
       <span
-        ><span class="legend-color" style="background: #33ff57"></span> Sản
-        xuất</span
+        ><span class="legend-color" style="background: #33aaff"></span>
+        Companies in Semiconductor</span
       >
       <span
-        ><span class="legend-color" style="background: #3385ff"></span> Tài
-        chính</span
+        ><span class="legend-color" style="background: #ffcc00"></span> Startups
+        in Semiconductor</span
+      >
+      <span
+        ><span class="legend-color" style="background: #33cc33"></span>
+        Companies in AI</span
+      >
+      <span
+        ><span class="legend-color" style="background: #9900cc"></span>
+        Equipment Suppliers</span
       >
     </div>
 
