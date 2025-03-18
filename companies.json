@@ -1,34 +1,182 @@
 [
   {
-    "name": "Tech Danang",
+    "name": "Marvell Technology Da Nang Co., Ltd.",
+    "type": ["strategic", "semiconductor"],
+    "segment": ["fabless"],
+    "facility": ["chip-design", "rnd"],
+    "lat": 16.0435,
+    "lng": 108.2185,
+    "address": "4th Floor, DMT Group Building, 484-486 2/9 Street, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "Mixel Vietnam Co., Ltd.",
+    "type": ["semiconductor"],
+    "segment": ["ip-eda"],
+    "facility": ["ip-core", "rnd"],
+    "lat": 16.0738,
+    "lng": 108.2245,
+    "address": "8th Floor, Bach Dang Complex, 50 Bach Dang Street, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "FPT Semiconductor., JSC",
+    "type": ["startup", "ai"],
+    "segment": ["fabless", "fpga", "outsourced"],
+    "facility": ["chip-design", "rnd", "ip-core"],
+    "lat": 16.0015,
+    "lng": 108.251,
+    "address": "F-Complex Building, FPT Urban Area, Nam Ky Khoi Nghia Street, Ngu Hanh Son District, Da Nang City"
+  },
+  {
+    "name": "Skyechip Co., Ltd.",
     "type": ["semiconductor", "ai"],
-    "segment": ["fabless", "fpga-design"],
-    "facility": ["chip-design", "research-development"],
-    "lat": 16.06,
-    "lng": 108.21
+    "segment": ["ip-eda", "fabless"],
+    "facility": ["chip-design", "ip-core", "rnd"],
+    "lat": 16.0632,
+    "lng": 108.213,
+    "address": "2nd Floor, K21/4 Le Hong Phong Street, Hai Chau District, Da Nang City"
   },
   {
-    "name": "Viet Software",
-    "type": ["ai", "strategic"],
-    "segment": ["eda-software", "university-rd"],
-    "facility": ["research-development", "ip-core"],
+    "name": "Quest Global Design Vietnam Co., Ltd.",
+    "type": ["semiconductor", "supplier"],
+    "segment": ["equipment", "outsourced"],
+    "facility": ["chip-design", "rnd"],
+    "lat": 16.0668,
+    "lng": 108.221,
+    "address": "36 Tran Quoc Toan Street, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "SIOUX High-Tech Software Co., Ltd.",
+    "type": ["semiconductor", "ai", "supplier"],
+    "segment": ["equipment", "fpga", "outsourced"],
+    "facility": ["rnd", "equipment-manufacturers"],
     "lat": 16.07,
-    "lng": 108.2
+    "lng": 108.2235,
+    "address": "74 Bach Dang Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City"
   },
   {
-    "name": "Danang Auto",
-    "type": ["strategic", "supplier"],
-    "segment": ["manufacturing", "materials"],
-    "facility": ["wafer-fabrication", "assembly-testing"],
+    "name": "SiBridges Vietnam Co., Ltd.",
+    "type": ["startup"],
+    "segment": ["ip-eda", "outsourced"],
+    "facility": ["chip-design", "rnd"],
+    "lat": 16.0465,
+    "lng": 108.242,
+    "address": "41 Chau Thi Vinh Te Street, My An Ward, Ngu Hanh Son District, Da Nang City"
+  },
+  {
+    "name": "Sanei Hytechs Vietnam Co., Ltd.",
+    "type": ["semiconductor"],
+    "segment": ["ip-eda", "fpga", "outsourced"],
+    "facility": ["chip-design", "ip-core", "rnd"],
+    "lat": 16.076,
+    "lng": 108.222,
+    "address": "Area A, H Building, 21st Floor, 02 Quang Trung Street, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "Uniquify Vietnam Co., Ltd.",
+    "type": ["semiconductor"],
+    "segment": ["ip-eda", "fabless"],
+    "facility": ["chip-design", "ip-core", "rnd"],
+    "lat": 16.07,
+    "lng": 108.2235,
+    "address": "5th Floor, Indochina Riverside Tower, 74 Bach Dang Street, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "Synopsys Co., Ltd., Da Nang Branch",
+    "type": ["strategic", "semiconductor"],
+    "segment": ["ip-eda"],
+    "facility": ["chip-design", "eda-software", "rnd"],
+    "lat": 16.077,
+    "lng": 108.219,
+    "address": "2nd Floor, F.Home Building, 16 Ly Thuong Kiet Street, Thach Thang Ward, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "Renesas Design Co., Ltd.",
+    "type": ["semiconductor"],
+    "segment": ["ip-eda", "fabless"],
+    "facility": ["chip-design", "rnd"],
+    "lat": 16.073,
+    "lng": 108.2,
+    "address": "8th Floor, UST Building, 637-639 Nguyen Tat Thanh Street, Xuan Ha Ward, Thanh Khe District, Da Nang City"
+  },
+  {
+    "name": "IDEAS2SILICON Vietnam Co., Ltd.",
+    "type": ["semiconductor"],
+    "segment": ["ip-eda", "fabless"],
+    "facility": ["chip-design", "ip-core", "rnd"],
+    "lat": 16.015,
+    "lng": 108.2135,
+    "address": "141 Diep Minh Chau Street, Hoa Xuan Ward, Cam Le District, Da Nang City"
+  },
+  {
+    "name": "HanSingTek Company",
+    "type": ["semiconductor"],
+    "segment": ["ip-eda", "fabless", "outsourced"],
+    "facility": ["chip-design", "ip-core", "eda-software", "rnd"],
+    "lat": 16.0735,
+    "lng": 108.2241,
+    "address": "Hilton Hotel, 50 Bach Dang Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "Grovf Company",
+    "type": ["semiconductor"],
+    "segment": ["ip-eda", "fabless"],
+    "facility": ["chip-design", "ip-core", "rnd"],
+    "lat": 16.079,
+    "lng": 108.2155,
+    "address": "4th Floor, ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Thuan Phuoc Ward, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "Connexus Technology Co., Ltd.",
+    "type": ["startup"],
+    "segment": ["ip-eda", "fabless"],
+    "facility": ["chip-design", "ip-core", "rnd"],
+    "lat": 16.0786,
+    "lng": 108.2159,
+    "address": "4th Floor, ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Thuan Phuoc Ward, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "Global Alliance of Semiconductor and AI Holdings JSC",
+    "type": ["strategic", "semiconductor", "ai"],
+    "segment": ["fabless", "osat", "equipment", "university-rdp"],
+    "facility": ["chip-design", "rnd", "assembly-testing"],
     "lat": 16.05,
-    "lng": 108.23
+    "lng": 108.249,
+    "address": "107 Vo Nguyen Giap Street, Ngu Hanh Son District, Da Nang City"
   },
   {
-    "name": "Finance Hub",
-    "type": ["supplier"],
-    "segment": ["equipment"],
-    "facility": ["equipment-manufacturers"],
-    "lat": 16.04,
-    "lng": 108.22
+    "name": "Acronics Solutions Co., Ltd.",
+    "type": ["startup"],
+    "segment": ["fpga", "outsourced"],
+    "facility": ["ip-core", "rnd"],
+    "lat": 16.0765,
+    "lng": 108.2225,
+    "address": "4th Floor, 03 Quang Trung Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City"
+  },
+  {
+    "name": "University of Science and Technology (DUT) – The University of Danang",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0746,
+    "lng": 108.1537,
+    "address": "54 Nguyen Luong Bang Street, Lien Chieu District, Da Nang City"
+  },
+  {
+    "name": "Vietnam-Korea University of Information and Communication Technology (VKU) – The University of Danang",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0005,
+    "lng": 108.2548,
+    "address": "470 Tran Dai Nghia Street, Ngu Hanh Son District, Da Nang City"
+  },
+  {
+    "name": "University of Technology and Education (UTE) – The University of Danang",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.073,
+    "lng": 108.2215,
+    "address": "48 Cao Thang Street, Hai Chau District, Da Nang City"
   }
 ]

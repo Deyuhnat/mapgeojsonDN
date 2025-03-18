@@ -2,7 +2,6 @@ var map = L.map("map", {
   center: [15.87, 107.81],
   zoom: 6,
   minZoom: 5,
-  maxZoom: 12,
   maxBounds: [
     [4.0, 100.0],
     [25.0, 120.0],
@@ -64,6 +63,7 @@ const typeColors = {
   startup: "#ffcc00",
   ai: "#33cc33",
   supplier: "#9900cc",
+  "university-rd": "#00f8f8",
 };
 
 // Company data will be loaded from JSON file
@@ -83,6 +83,45 @@ function getSelectedValues(dropdownId) {
   }
 
   return checked.map((cb) => cb.value);
+}
+
+// Define full names for company type, segment, and facility
+const typeNames = {
+  strategic: "City's Strategic Partners",
+  semiconductor: "Companies in Semiconductor",
+  startup: "Startups in Semiconductor",
+  ai: "Companies in AI",
+  supplier: "Equipment Suppliers",
+  "university-rd": "University R&D",
+};
+
+const segmentNames = {
+  "ip-eda": "IP & EDA",
+  fabless: "Fabless",
+  foundry: "Foundry",
+  idm: "IDM",
+  osat: "OSAT",
+  equipment: "Equipment",
+  materials: "Materials",
+  fpga: "FPGA Design",
+  outsourced: "Outsourced Design",
+  "university-rdp": "University R&D Partner",
+};
+
+const facilityNames = {
+  "chip-design": "Chip Design",
+  "ip-core": "IP Core",
+  "eda-software": "EDA Software",
+  rnd: "Research & Development",
+  "material-suppliers": "Material Suppliers",
+  "equipment-manufacturers": "Equipment Manufacturers",
+  "wafer-fabrication": "Wafer Fabrication",
+  "assembly-testing": "Assembly & Testing",
+};
+
+// Function to replace values with full names
+function getFullNames(data, mapping) {
+  return data.map((item) => mapping[item] || item).join(", ");
 }
 
 // Function to display companies on the map
@@ -117,11 +156,13 @@ function displayCompanies() {
       }).addTo(map);
 
       dot.bindPopup(
-        `📍 <b>${company.name}</b><br>Type: ${company.type.join(
-          ", "
-        )}<br>Segment: ${company.segment.join(
-          ", "
-        )}<br>Facility: ${company.facility.join(", ")}`
+        `📍 <b>${company.name}</b><br>Type: ${getFullNames(
+          company.type,
+          typeNames
+        )}<br>
+        Segment: ${getFullNames(company.segment, segmentNames)}<br>
+        Facility: ${getFullNames(company.facility, facilityNames)}<br>
+        Location: ${company.address}`
       );
 
       dot.bringToFront();
