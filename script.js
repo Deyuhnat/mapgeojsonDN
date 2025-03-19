@@ -156,7 +156,12 @@ function displayCompanies() {
       }).addTo(map);
 
       dot.bindPopup(
-        `📍 <b>${company.name}</b><br>Type: ${getFullNames(
+        `${
+          company.logo
+            ? `<img src="${company.logo}" style="width:100px; height:50px; object-fit:contain;"><br>`
+            : ""
+        }
+        📍 <b>${company.name}</b><br>Type: ${getFullNames(
           company.type,
           typeNames
         )}<br>

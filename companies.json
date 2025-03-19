@@ -24,7 +24,8 @@
     "facility": ["chip-design", "rnd", "ip-core"],
     "lat": 16.0015,
     "lng": 108.251,
-    "address": "F-Complex Building, FPT Urban Area, Nam Ky Khoi Nghia Street, Ngu Hanh Son District, Da Nang City"
+    "address": "F-Complex Building, FPT Urban Area, Nam Ky Khoi Nghia Street, Ngu Hanh Son District, Da Nang City",
+    "logo": "./logo/fptsemi.jpg"
   },
   {
     "name": "Skyechip Co., Ltd.",
