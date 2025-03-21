@@ -6,7 +6,8 @@
     "facility": ["chip-design", "rnd"],
     "lat": 16.0435,
     "lng": 108.2185,
-    "address": "4th Floor, DMT Group Building, 484-486 2/9 Street, Hai Chau District, Da Nang City"
+    "address": "4th Floor, DMT Group Building, 484-486 2/9 Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/marvell.png"
   },
   {
     "name": "Mixel Vietnam Co., Ltd.",
@@ -15,7 +16,8 @@
     "facility": ["ip-core", "rnd"],
     "lat": 16.0738,
     "lng": 108.2245,
-    "address": "8th Floor, Bach Dang Complex, 50 Bach Dang Street, Hai Chau District, Da Nang City"
+    "address": "8th Floor, Bach Dang Complex, 50 Bach Dang Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/mixel.png"
   },
   {
     "name": "FPT Semiconductor., JSC",
@@ -34,7 +36,8 @@
     "facility": ["chip-design", "ip-core", "rnd"],
     "lat": 16.0632,
     "lng": 108.213,
-    "address": "2nd Floor, K21/4 Le Hong Phong Street, Hai Chau District, Da Nang City"
+    "address": "2nd Floor, K21/4 Le Hong Phong Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/skyechip.png"
   },
   {
     "name": "Quest Global Design Vietnam Co., Ltd.",
@@ -43,25 +46,18 @@
     "facility": ["chip-design", "rnd"],
     "lat": 16.0668,
     "lng": 108.221,
-    "address": "36 Tran Quoc Toan Street, Hai Chau District, Da Nang City"
+    "address": "36 Tran Quoc Toan Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/quest.jpg"
   },
   {
-    "name": "SIOUX High-Tech Software Co., Ltd.",
+    "name": "Sioux High-Tech Software Co., Ltd.",
     "type": ["semiconductor", "ai", "supplier"],
     "segment": ["equipment", "fpga", "outsourced"],
     "facility": ["rnd", "equipment-manufacturers"],
     "lat": 16.07,
     "lng": 108.2235,
-    "address": "74 Bach Dang Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City"
-  },
-  {
-    "name": "SiBridges Vietnam Co., Ltd.",
-    "type": ["startup"],
-    "segment": ["ip-eda", "outsourced"],
-    "facility": ["chip-design", "rnd"],
-    "lat": 16.0465,
-    "lng": 108.242,
-    "address": "41 Chau Thi Vinh Te Street, My An Ward, Ngu Hanh Son District, Da Nang City"
+    "address": "74 Bach Dang Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City",
+    "logo": "./logo/sioux.jpg"
   },
   {
     "name": "Sanei Hytechs Vietnam Co., Ltd.",
@@ -70,7 +66,8 @@
     "facility": ["chip-design", "ip-core", "rnd"],
     "lat": 16.076,
     "lng": 108.222,
-    "address": "Area A, H Building, 21st Floor, 02 Quang Trung Street, Hai Chau District, Da Nang City"
+    "address": "Area A, H Building, 21st Floor, 02 Quang Trung Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/sanei.png"
   },
   {
     "name": "Uniquify Vietnam Co., Ltd.",
@@ -79,7 +76,8 @@
     "facility": ["chip-design", "ip-core", "rnd"],
     "lat": 16.07,
     "lng": 108.2235,
-    "address": "5th Floor, Indochina Riverside Tower, 74 Bach Dang Street, Hai Chau District, Da Nang City"
+    "address": "5th Floor, Indochina Riverside Tower, 74 Bach Dang Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/uniquify.png"
   },
   {
     "name": "Synopsys Co., Ltd., Da Nang Branch",
@@ -88,7 +86,8 @@
     "facility": ["chip-design", "eda-software", "rnd"],
     "lat": 16.077,
     "lng": 108.219,
-    "address": "2nd Floor, F.Home Building, 16 Ly Thuong Kiet Street, Thach Thang Ward, Hai Chau District, Da Nang City"
+    "address": "2nd Floor, F.Home Building, 16 Ly Thuong Kiet Street, Thach Thang Ward, Hai Chau District, Da Nang City",
+    "logo": "./logo/synopsys.png"
   },
   {
     "name": "Renesas Design Co., Ltd.",
@@ -97,25 +96,28 @@
     "facility": ["chip-design", "rnd"],
     "lat": 16.073,
     "lng": 108.2,
-    "address": "8th Floor, UST Building, 637-639 Nguyen Tat Thanh Street, Xuan Ha Ward, Thanh Khe District, Da Nang City"
+    "address": "8th Floor, UST Building, 637-639 Nguyen Tat Thanh Street, Xuan Ha Ward, Thanh Khe District, Da Nang City",
+    "logo": "./logo/renesas.png"
   },
   {
-    "name": "IDEAS2SILICON Vietnam Co., Ltd.",
+    "name": "Ideas2Silicon Vietnam Co., Ltd.",
     "type": ["semiconductor"],
     "segment": ["ip-eda", "fabless"],
     "facility": ["chip-design", "ip-core", "rnd"],
     "lat": 16.015,
     "lng": 108.2135,
-    "address": "141 Diep Minh Chau Street, Hoa Xuan Ward, Cam Le District, Da Nang City"
+    "address": "141 Diep Minh Chau Street, Hoa Xuan Ward, Cam Le District, Da Nang City",
+    "logo": "./logo/idea2.png"
   },
   {
-    "name": "HanSingTek Company",
+    "name": "HansingTek Company",
     "type": ["semiconductor"],
     "segment": ["ip-eda", "fabless", "outsourced"],
     "facility": ["chip-design", "ip-core", "eda-software", "rnd"],
     "lat": 16.0735,
     "lng": 108.2241,
-    "address": "Hilton Hotel, 50 Bach Dang Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City"
+    "address": "Hilton Hotel, 50 Bach Dang Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City",
+    "logo": "./logo/hansingtek.png"
   },
   {
     "name": "Grovf Company",
@@ -124,16 +126,8 @@
     "facility": ["chip-design", "ip-core", "rnd"],
     "lat": 16.079,
     "lng": 108.2155,
-    "address": "4th Floor, ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Thuan Phuoc Ward, Hai Chau District, Da Nang City"
-  },
-  {
-    "name": "Connexus Technology Co., Ltd.",
-    "type": ["startup"],
-    "segment": ["ip-eda", "fabless"],
-    "facility": ["chip-design", "ip-core", "rnd"],
-    "lat": 16.0786,
-    "lng": 108.2159,
-    "address": "4th Floor, ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Thuan Phuoc Ward, Hai Chau District, Da Nang City"
+    "address": "4th Floor, ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Thuan Phuoc Ward, Hai Chau District, Da Nang City",
+    "logo": "./logo/grovf.png"
   },
   {
     "name": "Global Alliance of Semiconductor and AI Holdings JSC",
@@ -142,7 +136,8 @@
     "facility": ["chip-design", "rnd", "assembly-testing"],
     "lat": 16.05,
     "lng": 108.249,
-    "address": "107 Vo Nguyen Giap Street, Ngu Hanh Son District, Da Nang City"
+    "address": "107 Vo Nguyen Giap Street, Ngu Hanh Son District, Da Nang City",
+    "logo": "./logo/gsa.jpg"
   },
   {
     "name": "Acronics Solutions Co., Ltd.",
@@ -151,7 +146,8 @@
     "facility": ["ip-core", "rnd"],
     "lat": 16.0765,
     "lng": 108.2225,
-    "address": "4th Floor, 03 Quang Trung Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City"
+    "address": "4th Floor, 03 Quang Trung Street, Hai Chau 1 Ward, Hai Chau District, Da Nang City",
+    "logo": "./logo/acronis.png"
   },
   {
     "name": "University of Science and Technology (DUT) – The University of Danang",
@@ -160,7 +156,8 @@
     "facility": ["rnd"],
     "lat": 16.0746,
     "lng": 108.1537,
-    "address": "54 Nguyen Luong Bang Street, Lien Chieu District, Da Nang City"
+    "address": "54 Nguyen Luong Bang Street, Lien Chieu District, Da Nang City",
+    "logo": "./logo/bku.jpg"
   },
   {
     "name": "Vietnam-Korea University of Information and Communication Technology (VKU) – The University of Danang",
@@ -169,7 +166,8 @@
     "facility": ["rnd"],
     "lat": 16.0005,
     "lng": 108.2548,
-    "address": "470 Tran Dai Nghia Street, Ngu Hanh Son District, Da Nang City"
+    "address": "470 Tran Dai Nghia Street, Ngu Hanh Son District, Da Nang City",
+    "logo": "./logo/vku.jpg"
   },
   {
     "name": "University of Technology and Education (UTE) – The University of Danang",
@@ -178,6 +176,97 @@
     "facility": ["rnd"],
     "lat": 16.073,
     "lng": 108.2215,
-    "address": "48 Cao Thang Street, Hai Chau District, Da Nang City"
+    "address": "48 Cao Thang Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/ute.png"
+  },
+  {
+    "name": "Duy Tan University (DTU)",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0753,
+    "lng": 108.2225,
+    "address": "03 Quang Trung Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/duytan.png"
+  },
+  {
+    "name": "FPT University Danang",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0018,
+    "lng": 108.2633,
+    "address": "FPT City, Hoa Hai Ward, Ngu Hanh Son District, Da Nang City",
+    "logo": "./logo/fptuniversity.png"
+  },
+  {
+    "name": "University of Greenwich (Alliance with FPT Education)",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0765,
+    "lng": 108.2371,
+    "address": "658 Ngo Quyen Street, Son Tra District, Da Nang City",
+    "logo": "./logo/greenwich.png"
+  },
+  {
+    "name": "University of Education – University of Danang",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0726,
+    "lng": 108.1538,
+    "address": "459 Ton Duc Thang Street, Lien Chieu District, Da Nang City",
+    "logo": "./logo/universityeducation.png"
+  },
+  {
+    "name": "Dong A University",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0591,
+    "lng": 108.2112,
+    "address": "33 Xo Viet Nghe Tinh Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/donga.png"
+  },
+  {
+    "name": "Swinburne University of Technology (Alliance with FPT Education)",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0396,
+    "lng": 108.2185,
+    "address": "Lot 1+2-A14-16, Bac Dai Tuong Niem Park Area, 2 Thang 9 Street, Hoa Cuong Bac Ward, Hai Chau District, Da Nang City",
+    "logo": "./logo/swinburne.png"
+  },
+  {
+    "name": "VNUK Institute for Research and Executive Education – University of Danang",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0709,
+    "lng": 108.2194,
+    "address": "158A Le Loi Street, Hai Chau District, Da Nang City",
+    "logo": "./logo/vnuk.png"
+  },
+  {
+    "name": "The American University in Vietnam (AUV)",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 15.975,
+    "lng": 108.251,
+    "address": "299 Tran Dai Nghia Street, Hoa Quy Ward, Ngu Hanh Son District, Da Nang City",
+    "logo": "./logo/americanuniversity.jpg"
+  },
+  {
+    "name": "Danang Vocational Training College (DANAVTC)",
+    "type": ["university-rd"],
+    "segment": ["university-rdp"],
+    "facility": ["rnd"],
+    "lat": 16.0865,
+    "lng": 108.245,
+    "address": "99 To Hien Thanh Street, Son Tra District, Da Nang City",
+    "logo": "./logo/danavtc.png"
   }
 ]
