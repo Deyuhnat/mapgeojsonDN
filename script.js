@@ -26,6 +26,11 @@ map.eachLayer(function (layer) {
   }
 });
 
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors",
+  maxZoom: 19,
+}).addTo(map);
+
 // Function to load GeoJSON for regions
 function addVietnamLayer(geojsonPath, color = "#d3daf0") {
   return new Promise((resolve, reject) => {
@@ -204,7 +209,8 @@ function displayCompanies() {
       let popupContent = `
       ${
         company.logo
-          ? `<img src="${company.logo}" style="width:100px; height:50px; object-fit:contain;"><br>`
+          ? `<img src="${company.logo}" style="width:180px; height:90px; object-fit:contain; margin-bottom:8px;">
+          <br>`
           : ""
       }
       📍 <b>${company.name}</b><br>
@@ -214,6 +220,7 @@ function displayCompanies() {
           ? `Semi Segment: ${getFullNames(company.segment, segmentNames)}<br>`
           : ""
       }
+      <!--
       ${
         company.facility && company.facility.length > 0
           ? `Semi Facility: ${getFullNames(
@@ -222,11 +229,13 @@ function displayCompanies() {
             )}<br>`
           : ""
       }
+      -->
       ${
         company.aiSegment && company.aiSegment.length > 0
           ? `AI Segment: ${getFullNames(company.aiSegment, aiSegmentNames)}<br>`
           : ""
       }
+      <!--
       ${
         company.aiFacility && company.aiFacility.length > 0
           ? `AI Facility: ${getFullNames(
@@ -235,10 +244,11 @@ function displayCompanies() {
             )}<br>`
           : ""
       }
+      -->
       Location: ${company.address}
     `;
 
-      dot.bindPopup(popupContent);  
+      dot.bindPopup(popupContent);
 
       dot.bringToFront();
       markers.push(dot);
