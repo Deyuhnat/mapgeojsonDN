@@ -11,7 +11,7 @@
     <div id="filter-container">
       <!-- Company Type Dropdown -->
       <div class="filter-group">
-        <label>Company Type:</label>
+        <label>Company Type</label>
         <div class="custom-dropdown">
           <button class="dropdown-toggle" data-target="company-type">
             All
@@ -19,33 +19,46 @@
           <div id="company-type" class="dropdown-menu">
             <label><input type="checkbox" value="all" checked /> All</label>
             <label
-              ><input type="checkbox" value="strategic" /> City's Strategic
-              Partners</label
-            >
-            <label
               ><input type="checkbox" value="semiconductor" /> Companies in
               Semiconductor</label
             >
-            <label
-              ><input type="checkbox" value="startup" /> Startups in
-              Semiconductor</label
-            >
             <label><input type="checkbox" value="ai" /> Companies in AI</label>
+            <label
+              ><input type="checkbox" value="gov" /> Government Agencies</label
+            >
             <label
               ><input type="checkbox" value="university-rd" /> University
               R&D</label
             >
             <label
+              ><input type="checkbox" value="strategic" /> City's Strategic
+              Partners</label
+            >
+            <label><input type="checkbox" value="investor" /> Investors</label>
+            <label
+              ><input type="checkbox" value="materials" /> Materials
+              Suppliers</label
+            >
+            <label
               ><input type="checkbox" value="supplier" /> Equipment
               Suppliers</label
             >
+            <label
+              ><input type="checkbox" value="energy-water" />
+              Energy/Water</label
+            >
+            <label
+              ><input type="checkbox" value="enabler" /> Enablers (Incubator &
+              Accelerators Program)</label
+            >
+            <label><input type="checkbox" value="startup" /> Startups</label>
           </div>
         </div>
       </div>
 
       <!-- Industry Segment Dropdown -->
       <div class="filter-group">
-        <label>Semiconductor Industry Segment:</label>
+        <label>Semi Industry Segment</label>
         <div class="custom-dropdown">
           <button class="dropdown-toggle" data-target="industry-segment">
             All
@@ -61,10 +74,6 @@
             <label><input type="checkbox" value="materials" /> Materials</label>
             <label><input type="checkbox" value="fpga" /> FPGA Design</label>
             <label
-              ><input type="checkbox" value="outsourced" /> Outsourced
-              Design</label
-            >
-            <label
               ><input type="checkbox" value="university-rdp" /> University R&D
               Partner</label
             >
@@ -74,7 +83,7 @@
 
       <!-- Facility Activity Dropdown -->
       <div class="filter-group">
-        <label>Semiconductor Facility Activity:</label>
+        <label>Semi Facility Activity</label>
         <div class="custom-dropdown">
           <button class="dropdown-toggle" data-target="facility-activity">
             All
@@ -117,6 +126,90 @@
         </div>
       </div>
 
+      <div class="filter-group">
+        <label>AI Industry Segment</label>
+        <div class="custom-dropdown">
+          <button class="dropdown-toggle" data-target="ai-segment">All</button>
+          <div id="ai-segment" class="dropdown-menu">
+            <label><input type="checkbox" value="all" checked /> All</label>
+            <label
+              ><input type="checkbox" value="ai-hardware" /> Hardware</label
+            >
+            <label
+              ><input type="checkbox" value="ai-apps" /> Applications</label
+            >
+            <label
+              ><input type="checkbox" value="ai-data" /> Data
+              Infrastructure</label
+            >
+            <label
+              ><input type="checkbox" value="ai-university" /> University R&D
+              Partner</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>AI Facility Activity</label>
+        <div class="custom-dropdown">
+          <button class="dropdown-toggle" data-target="ai-facility">All</button>
+          <div id="ai-facility" class="dropdown-menu">
+            <label><input type="checkbox" value="all" checked /> All</label>
+            <label
+              ><input type="checkbox" value="ai-hpc" /> AI Hardware &
+              High-Performance Computing</label
+            >
+            <label
+              ><input type="checkbox" value="ai-ml" /> Machine Learning</label
+            >
+            <label
+              ><input type="checkbox" value="ai-vision" /> Computer
+              Vision</label
+            >
+            <label
+              ><input type="checkbox" value="ai-convo" /> Conversational
+              Platforms</label
+            >
+            <label
+              ><input type="checkbox" value="ai-ethics" /> Ethical, Legal,
+              Social Aspects</label
+            >
+            <label
+              ><input type="checkbox" value="ai-robotics" /> Robotics</label
+            >
+            <label
+              ><input type="checkbox" value="ai-knowledge" /> Knowledge
+              Representation</label
+            >
+            <label
+              ><input type="checkbox" value="ai-search" /> Search &
+              Optimisation</label
+            >
+            <label
+              ><input type="checkbox" value="ai-routing" /> Planning, Routing &
+              Scheduling</label
+            >
+            <label
+              ><input type="checkbox" value="ai-labeling" /> Data Annotation &
+              Labeling</label
+            >
+            <label
+              ><input type="checkbox" value="ai-multiagent" /> Multi-Agent
+              Systems & Agent-based Modelling</label
+            >
+            <label
+              ><input type="checkbox" value="ai-context" /> Context-aware
+              Computing</label
+            >
+            <label
+              ><input type="checkbox" value="ai-rnd" /> Research &
+              Development</label
+            >
+          </div>
+        </div>
+      </div>
+
       <button id="reset-filter">Reset</button>
     </div>
 
@@ -128,23 +221,43 @@
       >
       <span
         ><span class="legend-color" style="background: #33aaff"></span>
-        Companies</span
-      >
-      <span
-        ><span class="legend-color" style="background: #ffcc00"></span>
-        Startups</span
+        Companies in Semiconductor</span
       >
       <span
         ><span class="legend-color" style="background: #33cc33"></span>
         Companies in AI</span
       >
       <span
-        ><span class="legend-color" style="background: #9900cc"></span>
-        Equipment Suppliers</span
+        ><span class="legend-color" style="background: #9999ff"></span>
+        Government Agencies</span
       >
       <span
         ><span class="legend-color" style="background: #00f8f8"></span>
         University R&D</span
+      >
+      <span
+        ><span class="legend-color" style="background: #ff9999"></span>
+        Investors</span
+      >
+      <span
+        ><span class="legend-color" style="background: #66ccff"></span>
+        Materials Suppliers</span
+      >
+      <span
+        ><span class="legend-color" style="background: #9900cc"></span>
+        Equipment Suppliers</span
+      >
+      <span
+        ><span class="legend-color" style="background: #66ffcc"></span>
+        Energy/Water</span
+      >
+      <span
+        ><span class="legend-color" style="background: #cc66ff"></span> Enablers
+        (Incubator & Accelerators Program)</span
+      >
+      <span
+        ><span class="legend-color" style="background: #ffcc00"></span>
+        Startups</span
       >
     </div>
 

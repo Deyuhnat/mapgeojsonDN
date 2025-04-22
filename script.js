@@ -58,12 +58,17 @@ addVietnamLayer("hoangsa.json", "#e76f51");
 
 // Define colors by company type
 const typeColors = {
-  strategic: "#ff5733",
   semiconductor: "#33aaff",
-  startup: "#ffcc00",
   ai: "#33cc33",
-  supplier: "#9900cc",
+  gov: "#9999ff",
   "university-rd": "#00f8f8",
+  strategic: "#ff5733",
+  investor: "#ff9999",
+  materials: "#66ccff",
+  supplier: "#9900cc",
+  "energy-water": "#66ffcc",
+  enabler: "#cc66ff",
+  startup: "#ffcc00",
 };
 
 // Company data will be loaded from JSON file
@@ -87,12 +92,17 @@ function getSelectedValues(dropdownId) {
 
 // Define full names for company type, segment, and facility
 const typeNames = {
-  strategic: "City's Strategic Partners",
   semiconductor: "Companies in Semiconductor",
-  startup: "Startups in Semiconductor",
   ai: "Companies in AI",
-  supplier: "Equipment Suppliers",
+  gov: "Government Agencies",
   "university-rd": "University R&D",
+  strategic: "City's Strategic Partners",
+  investor: "Investors",
+  materials: "Materials Suppliers",
+  supplier: "Equipment Suppliers",
+  "energy-water": "Energy/Water",
+  enabler: "Enablers (Incubator & Accelerators Program)",
+  startup: "Startups",
 };
 
 const segmentNames = {
@@ -104,7 +114,6 @@ const segmentNames = {
   equipment: "Equipment",
   materials: "Materials",
   fpga: "FPGA Design",
-  outsourced: "Outsourced Design",
   "university-rdp": "University R&D Partner",
 };
 
@@ -119,6 +128,29 @@ const facilityNames = {
   "assembly-testing": "Assembly & Testing",
 };
 
+const aiSegmentNames = {
+  "ai-hardware": "Hardware",
+  "ai-apps": "Applications",
+  "ai-data": "Data Infrastructure",
+  "ai-university": "University R&D Partner",
+};
+
+const aiFacilityNames = {
+  "ai-hpc": "AI Hardware & High-Performance Computing",
+  "ai-ml": "Machine Learning",
+  "ai-vision": "Computer Vision",
+  "ai-convo": "Conversational Platforms",
+  "ai-ethics": "Ethical, Legal, Social Aspects",
+  "ai-robotics": "Robotics",
+  "ai-knowledge": "Knowledge Representation",
+  "ai-search": "Search & Optimisation",
+  "ai-routing": "Planning, Routing & Scheduling",
+  "ai-labeling": "Data Annotation & Labeling",
+  "ai-multiagent": "Multi-Agent Systems & Agent-based Modelling",
+  "ai-context": "Context-aware Computing",
+  "ai-rnd": "Research & Development",
+};
+
 // Function to replace values with full names
 function getFullNames(data, mapping) {
   return data.map((item) => mapping[item] || item).join(", ");
@@ -129,6 +161,8 @@ function displayCompanies() {
   const typeFilters = getSelectedValues("company-type");
   const segmentFilters = getSelectedValues("industry-segment");
   const facilityFilters = getSelectedValues("facility-activity");
+  const aiSegmentFilters = getSelectedValues("ai-segment");
+  const aiFacilityFilters = getSelectedValues("ai-facility");
 
   // Remove old markers
   markers.forEach((marker) => map.removeLayer(marker));
@@ -144,8 +178,20 @@ function displayCompanies() {
     let matchesFacility =
       facilityFilters.length === 0 ||
       facilityFilters.some((filter) => company.facility.includes(filter));
+    let matchesAI =
+      aiSegmentFilters.length === 0 ||
+      aiSegmentFilters.some((filter) => company.aiSegment?.includes(filter));
+    let matchesAIFacility =
+      aiFacilityFilters.length === 0 ||
+      aiFacilityFilters.some((filter) => company.aiFacility?.includes(filter));
 
-    if (matchesType && matchesSegment && matchesFacility) {
+    if (
+      matchesType &&
+      matchesSegment &&
+      matchesFacility &&
+      matchesAI &&
+      matchesAIFacility
+    ) {
       var dot = L.circleMarker([company.lat, company.lng], {
         color: "#FFFFFF",
         fillColor: typeColors[company.type[0]] || "#000000", // Use the first type for color
@@ -165,9 +211,15 @@ function displayCompanies() {
           company.type,
           typeNames
         )}<br>
-        Segment: ${getFullNames(company.segment, segmentNames)}<br>
-        Facility: ${getFullNames(company.facility, facilityNames)}<br>
-        Location: ${company.address}`
+        Semi Segment: ${getFullNames(company.segment, segmentNames)}<br>
+        Semi Facility: ${getFullNames(company.facility, facilityNames)}<br>
+        AI Segment: ${getFullNames(company.aiSegment || [], aiSegmentNames)}<br>
+        AI Facility: ${getFullNames(
+          company.aiFacility || [],
+          aiFacilityNames
+        )}<br>
+        Location: ${company.address}
+        `
       );
 
       dot.bringToFront();

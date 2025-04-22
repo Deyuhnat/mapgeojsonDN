@@ -10,30 +10,36 @@ body {
 
 #filter-container {
   margin-top: 15px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   background: white;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
+  gap: 10px 20px;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-start;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 #filter-container label {
   font-weight: bold;
   color: #333;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 0px;
 }
 
 #filter-container select,
 #reset-filter {
-  padding: 8px 12px;
+  background-color: #f8f9fa;
+  font-weight: bold;
+  height: 38px;
+  padding: 8px 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  outline: none;
   cursor: pointer;
-  background-color: #fff;
-  transition: all 0.3s;
-  height: 38px;
+  transition: 0.2s;
 }
 
 #reset-filter {
@@ -69,27 +75,50 @@ body {
 }
 
 #legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 30px;
   margin-top: 10px;
-  padding: 10px;
+  padding: 12px 20px;
   background: white;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  font-size: 14px;
+}
+
+.legend-item {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 1px solid #333;
+}
+
+/* .legend-color {
   display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   margin-right: 5px;
   border: 1px solid #333;
-}
+} */
 
 .filter-group {
-  position: relative;
-  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+  min-width: 160px;
 }
 
 .custom-dropdown {
@@ -106,6 +135,10 @@ body {
   min-width: 150px;
   text-align: left;
   position: relative;
+  font-size: 14px;
+  height: 38px;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-toggle::after {
@@ -151,4 +184,24 @@ body {
 
 .dropdown-menu input[type="checkbox"] {
   margin-right: 8px;
+}
+
+@media (max-width: 1024px) {
+  #filter-container {
+    justify-content: center;
+  }
+
+  .filter-group {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-group {
+    flex: 1 1 100%;
+  }
+
+  #reset-filter {
+    width: 100%;
+  }
 }
