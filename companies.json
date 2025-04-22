@@ -627,7 +627,7 @@
     "type": ["ai"],
     "segment": [],
     "facility": [],
-    "aiSegment": [],
+    "aiSegment": ["ai-apps"],
     "aiFacility": ["ai-ml", "ai-ethics", "ai-convo"]
   },
   {
@@ -675,7 +675,7 @@
     "type": ["supplier"],
     "segment": [],
     "facility": [],
-    "aiSegment": [],
+    "aiSegment": ["ai-apps"],
     "aiFacility": ["ai-context", "ai-ml"]
   },
   {

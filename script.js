@@ -201,26 +201,44 @@ function displayCompanies() {
         pane: "markerPane",
       }).addTo(map);
 
-      dot.bindPopup(
-        `${
-          company.logo
-            ? `<img src="${company.logo}" style="width:100px; height:50px; object-fit:contain;"><br>`
-            : ""
-        }
-        📍 <b>${company.name}</b><br>Type: ${getFullNames(
-          company.type,
-          typeNames
-        )}<br>
-        Semi Segment: ${getFullNames(company.segment, segmentNames)}<br>
-        Semi Facility: ${getFullNames(company.facility, facilityNames)}<br>
-        AI Segment: ${getFullNames(company.aiSegment || [], aiSegmentNames)}<br>
-        AI Facility: ${getFullNames(
-          company.aiFacility || [],
-          aiFacilityNames
-        )}<br>
-        Location: ${company.address}
-        `
-      );
+      let popupContent = `
+      ${
+        company.logo
+          ? `<img src="${company.logo}" style="width:100px; height:50px; object-fit:contain;"><br>`
+          : ""
+      }
+      📍 <b>${company.name}</b><br>
+      Type: ${getFullNames(company.type, typeNames)}<br>
+      ${
+        company.segment && company.segment.length > 0
+          ? `Semi Segment: ${getFullNames(company.segment, segmentNames)}<br>`
+          : ""
+      }
+      ${
+        company.facility && company.facility.length > 0
+          ? `Semi Facility: ${getFullNames(
+              company.facility,
+              facilityNames
+            )}<br>`
+          : ""
+      }
+      ${
+        company.aiSegment && company.aiSegment.length > 0
+          ? `AI Segment: ${getFullNames(company.aiSegment, aiSegmentNames)}<br>`
+          : ""
+      }
+      ${
+        company.aiFacility && company.aiFacility.length > 0
+          ? `AI Facility: ${getFullNames(
+              company.aiFacility,
+              aiFacilityNames
+            )}<br>`
+          : ""
+      }
+      Location: ${company.address}
+    `;
+
+      dot.bindPopup(popupContent);  
 
       dot.bringToFront();
       markers.push(dot);
