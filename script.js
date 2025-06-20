@@ -1,6 +1,6 @@
 var map = L.map("map", {
-  center: [15.87, 107.81],
-  zoom: 6,
+  center: [16.0471, 108.2068], // ✅ Tọa độ trung tâm Đà Nẵng
+  zoom: 11,
   minZoom: 5,
   maxBounds: [
     [4.0, 100.0],
@@ -26,10 +26,10 @@ map.eachLayer(function (layer) {
   }
 });
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "© OpenStreetMap contributors",
-  maxZoom: 19,
-}).addTo(map);
+// L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+//   attribution: "© OpenStreetMap contributors",
+//   maxZoom: 19,
+// }).addTo(map);
 
 // Function to load GeoJSON for regions
 function addVietnamLayer(geojsonPath, color = "#d3daf0") {
@@ -147,7 +147,7 @@ const aiFacilityNames = {
   "ai-convo": "Conversational Platforms",
   "ai-ethics": "Ethical, Legal, Social Aspects",
   "ai-robotics": "Robotics",
-  "ai-knowledge": "Knowledge Representation",
+  "ai-infrastructure": "Data Infrastructure & Services",
   "ai-search": "Search & Optimisation",
   "ai-routing": "Planning, Routing & Scheduling",
   "ai-labeling": "Data Annotation & Labeling",

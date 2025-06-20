@@ -24,7 +24,7 @@
     "aiFacility": []
   },
   {
-    "name": "Skychip Solutions Vietnam Co., Ltd.",
+    "name": "Skyechip Solutions Vietnam Co., Ltd.",
     "lat": 16.0637,
     "lng": 108.2217,
     "logo": "./logo/skychip.png",
@@ -228,7 +228,7 @@
     "aiFacility": []
   },
   {
-    "name": "VSEMETK JSC",
+    "name": "VSEMTEK JSC",
     "lat": 16.0915,
     "lng": 108.21747,
     "logo": "",
@@ -236,6 +236,30 @@
     "type": ["semiconductor", "startup"],
     "segment": ["fabless"],
     "facility": ["chip-design", "rnd"],
+    "aiSegment": [],
+    "aiFacility": []
+  },
+  {
+    "name": "SEMICIRCLE JSC",
+    "lat": 16.0914,
+    "lng": 108.2174,
+    "logo": "",
+    "address": "ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Hai Chau, Da Nang",
+    "type": ["semiconductor"],
+    "segment": [],
+    "facility": ["chip-design"],
+    "aiSegment": [],
+    "aiFacility": []
+  },
+  {
+    "name": "Da Nang Semiconductor & AI Center for Research and Training (DSAC)",
+    "lat": 16.0919,
+    "lng": 108.2174,
+    "logo": "",
+    "address": "ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Hai Chau, Da Nang",
+    "type": ["gov"],
+    "segment": [],
+    "facility": [],
     "aiSegment": [],
     "aiFacility": []
   },
@@ -261,13 +285,7 @@
     "segment": [],
     "facility": [],
     "aiSegment": ["ai-apps", "ai-data"],
-    "aiFacility": [
-      "ai-convo",
-      "ai-ml",
-      "ai-labeling",
-      "ai-knowledge",
-      "ai-context"
-    ]
+    "aiFacility": ["ai-convo", "ai-ml", "ai-labeling", "ai-context"]
   },
   {
     "name": "TEX Technology Solutions JSC",
@@ -294,7 +312,6 @@
     "aiFacility": [
       "ai-convo",
       "ai-vision",
-      "ai-knowledge",
       "ai-search",
       "ai-labeling",
       "ai-context"
@@ -418,7 +435,13 @@
     "segment": [],
     "facility": [],
     "aiSegment": ["ai-apps"],
-    "aiFacility": ["ai-ml", "ai-knowledge", "ai-convo", "ai-context"]
+    "aiFacility": [
+      "ai-labeling",
+      "ai-vision",
+      "ai-search",
+      "ai-convo",
+      "ai-context"
+    ]
   },
   {
     "name": "Reazon AI Project Team",
@@ -430,7 +453,7 @@
     "segment": [],
     "facility": [],
     "aiSegment": ["ai-apps"],
-    "aiFacility": ["ai-ml", "ai-ethics", "ai-knowledge"]
+    "aiFacility": ["ai-ml", "ai-ethics"]
   },
   {
     "name": "FPT Information System Co., Ltd.",
@@ -473,6 +496,42 @@
     "facility": ["chip-design"],
     "aiSegment": ["ai-apps"],
     "aiFacility": ["ai-ml", "ai-labeling", "ai-context"]
+  },
+  {
+    "name": "Viettel IDC",
+    "lat": 16.07579,
+    "lng": 108.22235,
+    "logo": "",
+    "address": "Da Nang Software Park, 02 Quang Trung Street, Hai Chau, Da Nang",
+    "type": ["ai"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-data"],
+    "aiFacility": ["ai-infrastructure"]
+  },
+  {
+    "name": "Evvo Labs Vietnam Co., Ltd",
+    "lat": 16.0239,
+    "lng": 108.2452,
+    "logo": "",
+    "address": "305 Doan Khue Street, Khue My Ward, Ngu Hanh Son District, Da Nang",
+    "type": ["ai"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-data"],
+    "aiFacility": ["ai-infrastructure"]
+  },
+  {
+    "name": "Var Meta Technology JSC",
+    "lat": 16.033,
+    "lng": 108.2204,
+    "logo": "",
+    "address": "68 Xo Viet Nghe Tinh Street, Hoa Cuong Nam Ward, Cam Le District, Da Nang",
+    "type": ["ai"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-apps"],
+    "aiFacility": []
   },
   {
     "name": "Magrabbit Vietnam Co., Ltd.",
@@ -584,8 +643,8 @@
   },
   {
     "name": "Vox Cool Co., Ltd.",
-    "lat": 16.1005,
-    "lng": 108.149,
+    "lat": 16.0985,
+    "lng": 108.1447,
     "logo": "",
     "address": "Lots 21,22-B2-12 Nguyen Mau Kien Street, Lien Chieu, Da Nang",
     "type": ["ai"],
@@ -745,7 +804,7 @@
     "aiFacility": ["ai-labeling", "ai-ml"]
   },
   {
-    "name": "VNPT Da Nang Business Center",
+    "name": "VNPT Da Nang",
     "lat": 16.047,
     "lng": 108.2135,
     "logo": "",
@@ -959,5 +1018,89 @@
     "facility": ["ai-rnd"],
     "aiSegment": ["ai-university"],
     "aiFacility": ["ai-rnd"]
+  },
+  {
+    "name": "DGW ASIA Co., Ltd.",
+    "lat": 16.0401,
+    "lng": 108.2235,
+    "logo": "",
+    "address": "15 Quang Trung Street, Hai Chau, Da Nang",
+    "type": ["ai"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-apps"],
+    "aiFacility": ["ai-ml", "ai-labeling"]
+  },
+  {
+    "name": "CMC Telecom Danang",
+    "lat": 16.0594,
+    "lng": 108.2112,
+    "logo": "",
+    "address": "01 Le Dinh Ly Street, Thanh Khe, Da Nang",
+    "type": ["ai"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-data"],
+    "aiFacility": ["ai-infrastructure"]
+  },
+  {
+    "name": "FPT Telecom Danang",
+    "lat": 15.9675,
+    "lng": 108.2605,
+    "logo": "",
+    "address": "FPT City, Ngu Hanh Son, Da Nang",
+    "type": ["ai"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-data"],
+    "aiFacility": ["ai-infrastructure"]
+  },
+  {
+    "name": "NuverxAI - AI & Creative Innovation Co., Ltd.",
+    "lat": 16.0917,
+    "lng": 108.2175,
+    "logo": "",
+    "address": "ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Hai Chau, Da Nang",
+    "type": ["ai", "startup"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-apps"],
+    "aiFacility": ["ai-ml", "ai-vision", "ai-convo", "ai-context"]
+  },
+  {
+    "name": "VIETRO CARE Co., Ltd.",
+    "lat": 16.0915,
+    "lng": 108.2176,
+    "logo": "",
+    "address": "ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Hai Chau, Da Nang",
+    "type": ["ai", "startup"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-apps"],
+    "aiFacility": ["ai-ml", "ai-convo"]
+  },
+  {
+    "name": "SVN SOFTWARE Co., Ltd.",
+    "lat": 16.0916,
+    "lng": 108.2173,
+    "logo": "",
+    "address": "ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Hai Chau, Da Nang",
+    "type": ["ai", "startup"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-apps"],
+    "aiFacility": ["ai-ml", "ai-routing", "ai-search"]
+  },
+  {
+    "name": "SPHERE AX Co., Ltd.",
+    "lat": 16.0918,
+    "lng": 108.2174,
+    "logo": "",
+    "address": "ICT 1 Building, Da Nang Software Park No. 2, Nhu Nguyet Street, Hai Chau, Da Nang",
+    "type": ["ai", "startup"],
+    "segment": [],
+    "facility": [],
+    "aiSegment": ["ai-apps"],
+    "aiFacility": ["ai-ml", "ai-vision", "ai-context"]
   }
 ]
